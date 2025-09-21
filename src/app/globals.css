@@ -11,7 +11,24 @@
   --border: #333;
 }
 
+[data-theme="dark"] .background-mountains {
+  background: url("/dark-bg.png") no-repeat bottom center fixed;
+  background-color: #adadad;
+  background-size: cover;
+  transition: background 0.5s ease-in-out;
+}
+
+.background-mountains .app-footer {
+  @apply dark:invert-0 invert;
+}
+
 @layer base {
+  .background-mountains {
+    background: url("/light-bg.png") no-repeat bottom center fixed;
+    background-size: cover;
+    transition: background 0.5s ease-in-out;
+  }
+
   html {
     scrollbar-gutter: stable;
   }
@@ -129,4 +146,27 @@
 
 [data-theme="dark"] .signature {
   filter: invert(0.8);
+}
+
+/* Background toggle button animations */
+.background-toggle-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.background-toggle-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.background-toggle-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.background-toggle-exit-active {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }

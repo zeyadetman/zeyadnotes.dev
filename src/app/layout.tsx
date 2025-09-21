@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/app/_components/layout/header";
 import { Footer } from "@/app/_components/layout/footer";
+import { BackgroundToggle } from "@/app/_components/background-toggle/background-toggle";
 import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import ProgressBarProvider from "@/app/_components/providers/progress-bar-provider";
@@ -32,16 +33,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={`${inter.className} background-mountains`}>
         <ThemeProvider enableColorScheme enableSystem defaultTheme="system">
           <ProgressBarProvider>
             <div className="container">
               <Header />
-              <main className="flex min-h-[calc(100vh-20rem)] max-w-3xl mx-auto items-center flex-col justify-between px-6 ">
+              <main className="flex min-h-[calc(100vh-20rem)] max-w-3xl mx-auto items-center flex-col justify-between px-6">
                 {children}
               </main>
               <Footer />
             </div>
+            <BackgroundToggle />
             <Vercel />
           </ProgressBarProvider>
         </ThemeProvider>

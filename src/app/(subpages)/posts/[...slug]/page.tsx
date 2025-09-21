@@ -87,7 +87,7 @@ export default async function PostPage({ params }: PostProps) {
   const className =
     post?.metadata.lang === "ar"
       ? `py-6 prose dark:prose-invert mx-auto max-w-3xl font-medium ${tajawal.className}`
-      : `py-6 prose dark:prose-invert mx-auto max-w-3xl`;
+      : `py-6 prose dark:prose-invert mx-auto max-w-3xl `;
 
   if (!post) {
     notFound();
