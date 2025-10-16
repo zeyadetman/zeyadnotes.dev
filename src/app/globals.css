@@ -11,24 +11,11 @@
   --border: #333;
 }
 
-[data-theme="dark"] .background-mountains {
-  background: url("/dark-bg.png") no-repeat bottom center fixed;
-  background-color: #adadad;
-  background-size: cover;
-  transition: background 0.5s ease-in-out;
-}
-
 .background-mountains .app-footer {
   @apply dark:invert-0 invert;
 }
 
 @layer base {
-  .background-mountains {
-    background: url("/light-bg.png") no-repeat bottom center fixed;
-    background-size: cover;
-    transition: background 0.5s ease-in-out;
-  }
-
   html {
     scrollbar-gutter: stable;
   }

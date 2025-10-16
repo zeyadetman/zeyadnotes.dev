@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export const Header = () => {
   return (
-    <header className="pt-4 md:pt-8" suppressHydrationWarning>
+    <header suppressHydrationWarning>
       <div className="navbar">
         <div className="flex-grow px-4 w-36 h-36">
           <Link href="/">
