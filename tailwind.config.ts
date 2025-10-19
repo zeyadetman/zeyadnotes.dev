@@ -20,7 +20,7 @@ const config: Config = {
           secondary: "#1c1c1c",
           "secondary-content": "#a0a0a0",
           "base-100": "#161616",
-          accent: "#F56E0F",
+          accent: "#F56E0E",
           "--rounded-box": "0.25rem", // border radius rounded-box utility class, used in card and other large boxes
           "--rounded-btn": "0.25rem", // border radius rounded-btn utility class, used in buttons and similar element
           // "--animation-btn": "0.25s", // duration of animation when you click on button
@@ -49,7 +49,7 @@ const config: Config = {
           secondary: "#a0a0a0",
           "secondary-content": "#1c1c1c",
           "base-100": "#eee",
-          accent: "#F56E0F",
+          accent: "#F56E0E",
           "--rounded-box": "0.25rem", // border radius rounded-box utility class, used in card and other large boxes
           "--rounded-btn": "0.25rem", // border radius rounded-btn utility class, used in buttons and similar element
           "*": {
